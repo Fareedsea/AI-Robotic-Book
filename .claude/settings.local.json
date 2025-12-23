@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir README.md)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -Json \"Project Name\nAI/Spec-Driven Book Creation with Spec-Kit Plus, Claude Code & Docusaurus\n________________________________________\nProject Purpose\nTo design, write, and deploy a fully AI-assisted technical book using:\n•    Spec-Kit Plus for structured AI-driven development\n•    Claude Code for professional AI writing and coding\n•    Docusaurus for modern documentation-style book publishing\n•    GitHub Pages for live public hosting\nThis project demonstrates how AI can be used as a full-stack authoring and publishing system for books and documentation.\n________________________________________\nTarget Audience\n•    Beginner to intermediate students of:\no    AI\no    Web development\no    Technical documentation\no    DevOps & GitHub\n•    University students\n•    Self-learners\n•    Educators\n•    Technical writers\n________________________________________\nProblem Statement\nTraditional book writing and publishing is:\n•    Slow\n•    Manual\n•    Hard to update\n•    Not automation-friendly\n•    Not AI-integrated\nThere is no structured, reproducible system that combines:\n•    AI writing\n•    Technical validation\n•    Documentation format\n•    Auto-deployment\nThis project solves that problem using AI + Spec-driven workflow + modern web documentation tools.\n________________________________________\nSolution Overview\nWe will build a complete AI-powered book pipeline where:\n1.    The project is defined using /sp.constitution\n2.    Book scope is locked using /sp.specify\n3.    Chapters are planned using /sp.plan\n4.    Workflows are broken into tasks with /sp.tasks\n5.    The full project is built using /sp.implement\nThe final output will be:\n•    A fully written book\n•    Hosted on GitHub Pages\n•    Powered by Docusaurus\n•    Generated using Claude Code\n•    Managed using Spec-Kit Plus\n________________________________________\nCore Features\n•    ✅ AI-generated structured chapters\n•    ✅ Markdown-based Docusaurus book\n•    ✅ GitHub version control\n•    ✅ Auto-deployment to GitHub Pages\n•    ✅ SEO-friendly documentation site\n•    ✅ Code blocks, commands, and diagrams\n•    ✅ Beginner-friendly learning flow\n•    ✅ AI-validated content\n________________________________________\nFunctional Requirements\n•    The system must:\no    Generate book content using AI\no    Convert content into Docusaurus Markdown format\no    Organize chapters as docs routes\no    Push code to GitHub repository\no    Deploy site to GitHub Pages\n•    Each chapter must include:\no    Learning Objectives\no    Explanation\no    Steps\no    Commands\no    Summary\no    Practice Tasks\n________________________________________\nNon-Functional Requirements\n•    Readability level: Grade 8–10\n•    Deployment speed: Under 3 minutes\n•    Device support:\no    Desktop\no    Tablet\no    Mobile\n•    Stability:\no    No broken links\no    No broken code blocks\n________________________________________\nUser Stories\n•    As a student, I want to learn how AI can be used to write and publish a book.\n•    As a developer, I want to deploy a book as a live website.\n•    As a teacher, I want a reusable teaching resource.\n•    As a technical writer, I want an automated publishing system.\n________________________________________\nTechnology Stack\n•    Writing & Planning:\no    Spec-Kit Plus\no    Claude Code\n•    Documentation Website:\no    Docusaurus\n•    Version Control & Deployment:\no    GitHub\no    GitHub Pages\n________________________________________\nDeliverables\n•    ✅ Complete AI-written book\n•    ✅ Docusaurus project structure\n•    ✅ GitHub repository\n•    ✅ Deployed book website\n•    ✅ Step-by-step documentation\n•    ✅ Automation-ready workflow\n________________________________________\nOut of Scope\n•    No mobile app development\n•    No paid hosting solution\n•    No blockchain integration\n•    No backend APIs\n________________________________________\nValidation Metrics\n•    ✅ Site loads successfully on GitHub Pages\n•    ✅ All chapters render correctly\n•    ✅ No broken navigation routes\n•    ✅ All commands work in real environment\n•    ✅ No plagiarism detected\n•    ✅ Clear beginner learning progression\" -Number 1 -ShortName \"ai-book-pipeline\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/setup-plan.ps1\" -Json)",
+      "Bash(dir /s)",
+      "Bash(dir /s /b)",
+      "Bash(dir)",
+      "Bash(dir Frontend)",
+      "Bash(dir specs)",
+      "Bash(dir history)",
+      "Bash(dir specs001-ai-book-pipeline)",
+      "Bash(dir \"specs\\001-ai-book-pipeline\")",
+      "Bash(dir \"history\\prompts\")",
+      "Bash(dir \"Frontend\\docs\")",
+      "Bash(dir \"Frontend\\src\")",
+      "Bash(dir \"Frontend\\docs\\tutorial-basics\")",
+      "Bash(dir \".specify\")",
+      "Bash(dir \".specify\\memory\")",
+      "Bash(dir \".github\")",
+      "Bash(dir \"Frontend\\.github\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/update-agent-context.ps1\" -AgentType claude)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)",
+      "Bash(dir \"specs/001-ai-book-pipeline/checklists/\")",
+      "Bash(dir Frontend*.json)",
+      "Bash(findstr -i \"eslintrc\\|prettierrc\\|lint-staged\\|husky\")",
+      "Bash(dir \"Frontend\\.*rc\" \"Frontend\\eslint*\" \"Frontend\\prettier*\" \"Frontend\\*config*\")",
+      "Bash(dir Frontenddocs)",
+      "Bash(dir \"Frontend/docs\")",
+      "Bash(dir \"Frontend/docs/tutorial-basics\" \"Frontend/docs/tutorial-extras\")",
+      "Bash(dir \"Frontend\\docs\\intro.md\")",
+      "Bash(npm run build)",
+      "Bash(npm run serve)",
+      "Bash(git add .)"
+    ]
+  }
+}

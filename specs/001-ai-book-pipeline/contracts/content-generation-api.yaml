@@ -1,0 +1,110 @@
+# Content Generation API Contract
+
+## Purpose
+This contract defines the interface for AI-powered content generation for the book creation system.
+
+## Endpoints
+
+### Generate Chapter Content
+- **Method**: POST
+- **Path**: `/api/generate/chapter`
+- **Description**: Generate a complete chapter using AI with proper structure
+
+#### Request
+```json
+{
+  "chapterNumber": 1,
+  "chapterTitle": "Introduction to AI-Driven Book Creation",
+  "topics": ["AI writing", "Spec-Kit Plus", "Claude Code", "Docusaurus", "GitHub Pages"],
+  "targetAudience": "beginner to intermediate",
+  "sectionsRequired": [
+    "learningObjectives",
+    "explanation",
+    "steps",
+    "commands",
+    "summary",
+    "practiceTasks"
+  ]
+}
+```
+
+#### Response
+```json
+{
+  "chapterId": "chapter-1",
+  "title": "Introduction to AI-Driven Book Creation",
+  "content": {
+    "learningObjectives": ["List the key tools", "Understand the workflow", "Identify benefits"],
+    "explanation": "Detailed explanation content...",
+    "steps": ["Step 1 description", "Step 2 description"],
+    "commands": ["Command example with explanation"],
+    "summary": "Chapter summary content...",
+    "practiceTasks": ["Task 1 description", "Task 2 description"]
+  },
+  "metadata": {
+    "wordCount": 1250,
+    "readabilityLevel": "Grade 8",
+    "generatedAt": "2025-12-23T10:00:00Z",
+    "validated": false
+  }
+}
+```
+
+### Validate Content
+- **Method**: POST
+- **Path**: `/api/validate/content`
+- **Description**: Validate generated content for accuracy and readability
+
+#### Request
+```json
+{
+  "content": "Chapter content to validate...",
+  "validationType": "command_accuracy|readability|plagiarism"
+}
+```
+
+#### Response
+```json
+{
+  "isValid": true,
+  "issues": [],
+  "suggestions": [],
+  "readabilityScore": 8.5,
+  "validatedAt": "2025-12-23T10:00:00Z"
+}
+```
+
+### Export Chapter to Markdown
+- **Method**: POST
+- **Path**: `/api/export/markdown`
+- **Description**: Convert structured chapter content to Docusaurus-compatible markdown
+
+#### Request
+```json
+{
+  "chapterData": {
+    "title": "Chapter Title",
+    "content": {
+      "learningObjectives": ["Objective 1"],
+      "explanation": "Content...",
+      "steps": ["Step 1"],
+      "commands": ["Command 1"],
+      "summary": "Summary...",
+      "practiceTasks": ["Task 1"]
+    },
+    "frontmatter": {
+      "sidebar_label": "Chapter Title",
+      "sidebar_position": 1,
+      "description": "Brief description"
+    }
+  }
+}
+```
+
+#### Response
+```json
+{
+  "markdown": "# Chapter Title\n\n<!-- frontmatter: {\"sidebar_label\":\"Chapter Title\",\"sidebar_position\":1,\"description\":\"Brief description\"} -->\n\n## Learning Objectives\n\n- Objective 1\n\n...",
+  "exportedAt": "2025-12-23T10:00:00Z"
+}
+```
